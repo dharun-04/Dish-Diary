@@ -80,7 +80,7 @@ function Header({searchRecipes, isHome, handleNavigateHome, handleNavigateProfil
         >
           <img
             className="user-image"
-            src={` http://localhost:8080/${user.picture}`}
+            src={user.picture}
             alt="user"
           />
           <span className="user-name">

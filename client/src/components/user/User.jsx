@@ -16,7 +16,7 @@ const User = ({user}) => {
             <span className='user-email-style'>{user.email}</span>
         </div>
         <div>
-            <img  src={` http://localhost:8080/user/${user.picture}`} alt={user.picture} className='user-image-style' />
+            <img  src={user.picture} alt={user.picture} className='user-image-style' />
         </div>
     </div>
   )
