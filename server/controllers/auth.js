@@ -2,12 +2,6 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
-/* REGISTER USER */
-/**
- * Registers a new user in the database.
- * Hashes the password and saves the user object in the database.
- * Returns the saved user object in the response.
- */
 export const register = async (req, res) => {
   try {
     console.log(req.body);
@@ -36,14 +30,6 @@ export const register = async (req, res) => {
   }
 };
 
-/* LOGGING IN */
-
-/**
- * Logs in an existing user.
- * Finds the user with the given email in the database.
- * Compares the hashed password with the provided password.
- * If the password matches, generates a JWT token and sends it in the response along with the user object.
- */
 export const login = async (req, res) => {
   try {
     console.log(req.body);

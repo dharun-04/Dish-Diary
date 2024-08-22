@@ -1,10 +1,5 @@
 import SavedRecipes from "../models/SavedRecipes.js";
 
-/* READ */
-/**
- * Retrieves the saved recipes of a user with the given user ID.
- * Returns an array of recipe IDs in the response.
- */
 export const getSavedRecipe = async (req, res) => {
   try {
     const { userId } = req.params;
@@ -14,15 +9,6 @@ export const getSavedRecipe = async (req, res) => {
     res.status(404).json({ message: err.message });
   }
 };
-
-/* UPDATE */
-/**
- * Updates the saved recipes of a user with the given user ID.
- * If the recipe ID is already in the user's saved recipes, removes it.
- * If the recipe ID is not in the user's saved recipes, adds it.
- * Returns an array of recipe IDs in the response.
- */
-
 export const updateSavedRecipe = async (req, res) => {
   try {
     const { userId } = req.params;

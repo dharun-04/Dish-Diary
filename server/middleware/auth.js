@@ -1,9 +1,5 @@
 import jwt from "jsonwebtoken";
 
-// Middleware to verify token sent in the request header.
-// If the token is valid, sets the `req.user` property to the decoded token object.
-// If the token is invalid or missing, returns an error response.
-
 export const verifyToken = async (req, res, next) => {
   try {
     let token = req.header("Authorization");

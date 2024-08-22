@@ -6,9 +6,6 @@ import { faMagnifyingGlass, faGear } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import {setLogout} from "../../state/index";
 /**
- * The Header component displays the application header with the logo, search bar,
- * and user profile settings.
- *
  * @param {function} searchRecipes - A function that searches for recipes based on user input.
  * @param {boolean} isProfile - A boolean that determines if the header is being used on a profile page.
  * @returns {JSX.Element} - A JSX.Element representing the Header component.
@@ -20,12 +17,7 @@ function Header({searchRecipes, isHome, handleNavigateHome, handleNavigateProfil
   const [showDropdown, setShowDropdown] = useState(false);
   const [inputData, setInputData] = useState("");
   const user = useSelector((state) => state.user);
-  
-   /**
-   * Handles input changes for the search bar.
-   *
-   * @param {object} e - The input change event.
-   */
+
   function handleInput(e) {
     e.preventDefault();
     if(inputData.trim() === ""){

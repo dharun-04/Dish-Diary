@@ -14,11 +14,8 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          {/* Defining the routes and their corresponding components */}
           <Route path = "/" element = {<LoginPage />} />
-          {/* If authenticated, render HomePage component, else navigate to login page */}
           <Route path = "/home" element = {isAuth ? <HomePage /> : <Navigate  to = "/" />} /> 
-          {/* If authenticated, render ProfilePage component, else navigate to login page */}
           <Route path = "/profile/:userId" element = {isAuth ? <ProfilePage/> : <Navigate to = "/" />} />
         </Routes>
       </BrowserRouter>
